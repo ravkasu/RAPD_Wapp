@@ -1,0 +1,441 @@
+/*primary color*/
+.bg-cream {
+    background-color: #e5e4e0;
+}
+.dis_none{
+    display: none;
+}
+.headerfixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.slide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns, each taking 1 fraction of available space */
+    gap: 10px;
+    /* Optional spacing between grid items */
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 768px) {
+    /* Adjust layout for screens less than 768px wide */
+    .slide-grid {
+      grid-template-columns: 1fr; /* Stack items on top of each other for smaller screens */
+    }
+  }
+.slider .slide {
+    display: none;
+    transition: top 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block;
+    top: 0;
+}
+.cf-icon{
+    border-radius: 50%;
+    background: #f74d07;
+    width:40px;
+    height:40px;
+    position: fixed;
+    bottom: 10%;
+    right: 2%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cf-contactForm{
+    position: relative;
+}
+.contactForm{
+    background: white;
+    border:1px solid #f74d07;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    margin-top: 20px;
+    min-width: 400px;
+    width: 400px;
+}
+#myContent{
+    display: none;
+}
+.flex1 {
+    flex: 1 0 auto !important;
+}
+
+.bi-file {
+    color: white;
+}
+
+.bi-boxes,
+.bi-slack,
+.bi-send-arrow-up-fill {
+    color: #f74d07;
+}
+
+/* #topSection {
+    display: block; 
+  } */
+#submenu {
+    display: none;
+}
+
+nav a {
+    cursor: pointer !important;
+}
+.text-justify{
+    text-align: justify;
+}
+/* p, */
+/* li, */
+dd {
+    text-align: justify;
+}
+
+@media (max-width:990px) {
+
+    footer .grid div.border-l {
+        border-color: transparent;
+    }
+}
+
+/*font*/
+.font-upper {
+    text-transform: uppercase;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-rapds-color2 {
+    background: #436665;
+}
+
+.border-yellow-500 {
+    border-color: #f74d07;
+}
+
+.bg-yellow-500,
+.bg-indigo-600 {
+    background-color: #f74d07;
+}
+
+.text-red {
+    color: #f74d07;
+    font-size: 4vh;
+}
+
+.h-hvh {
+    height: 100vh;
+}
+
+.text-white-custom {
+    color: white;
+    font-size: 4vh;
+}
+
+.text-yellow-500 {
+    color: #f74d07;
+}
+
+.text-violet-600 {
+    color: violet;
+}
+
+.text-rapd-1 {
+    color: #595959d9;
+}
+
+.no-wrap {
+    text-wrap: nowrap !important;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.w-3h {
+    width: 300px !important;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 8px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.floating-4 {
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating-4 {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 8px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.text-darken {
+    color: #335352;
+}
+
+#industry span {
+    color: #335352;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2.5vh;
+    text-wrap: nowrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-grad-red {
+    background: linear-gradient(105.5deg, #c56139 19.57%, #f74d07 78.85%);
+}
+
+.foot-color {
+    background: #6c7a69;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+
+/*--------Cookies------*/
+#cookie-consent {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    background: #ffffff;
+    /* width: 35vw; */
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px Solid #f74d07;
+    z-index: 999999;
+}
+
+#cookie-consent.cookie-hidden,
+#cookie-consent.text-hide {
+    display: none;
+}
+
+/* #accept-cookies, #reject-cookies {
+    margin: 10px;
+    padding: 5px 10px;
+    background: #f74d07;
+    color: #ffffff;
+    border-radius: 10px;
+} */
+
+/*--Custom Navigation Submenu---*/
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+    /* Needed for submenu positioning */
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-item:hover>.sub-menu {
+    display: block;
+    /* Show submenu on hover */
+    position: absolute;
+    /* Absolute positioning relative to parent */
+    top: 100%;
+    /* Position below the parent item */
+    right: 20px;
+    /* Align to the left of the parent item */
+    background: #ffffff;
+    /* Optional background color for submenu */
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 999999;
+    grid-template-columns: minmax(150px, auto);
+}
+
+.menu-item:hover>.sub-menu {
+    display: grid;
+    grid-template-columns: minmax(150px, auto);
+
+    /* Adjust min width as needed */
+    @media (max-width: 768px) {
+        grid-template-columns: minmax(100px, auto);
+        /* Adjust min width for smaller screens */
+    }
+}
+
+.sub-menu {
+    display: none;
+    /* Hide submenus initially */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: calc(70vw - 47vw);
+}
+
+.sub-menu li {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+}
+
+.sub-menu a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+}
+
+/*----Footer----*/
+@media (min-width: 768px) {
+
+    /* Targets screens 768px and above (desktop) */
+    .responsive-center {
+        margin: 0 auto;
+        /* Margin left and right auto for centering */
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Targets screens 767px and below (mobile) */
+    .responsive-center {
+        margin: 20px 0px 10px 0;
+        /* Remove margins for left alignment */
+        padding: 0 4px;
+        /* Add horizontal padding for better visual presentation (optional) */
+    }
+}
+
+/*----scroll to top ----*/
+/* Style your content here */
+
+#scroll-top-btn {
+    position: fixed;
+    /* Fix the button to a position */
+    bottom: 20px;
+    /* Set the position from the bottom */
+    right: 20px;
+    /* Set the position from the right */
+    /* display: none; */
+    z-index: 999999;
+    /* Ensure the button is on top of other elements */
+
+    /* Style the button (optional) */
+    background-color: #f74d07;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Show the button when scrolled down */
+.show-scroll-top-btn {
+    display: block;
+}
+
+.show-scroll-top-btn {
+    display: none;
+}
+
+/*-----Shadow Effects----*/
+
+.caret {
+    border-left: solid 70px transparent; 
+    border-right: solid 70px transparent; 
+    border-bottom: solid 70px #fff;
+    filter: drop-shadow(0 0 30px #333);
+    height: 0; 
+    width: 0; 
+  }
+/*-------------------*/
+.marquee-container {
+    overflow: hidden; /* Hide overflow content */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .marquee-content {
+    display: inline-block; /* Display content inline */
+    animation: marquee 15s linear infinite; /* Animation for scrolling */
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    50% { transform: translateX(-100%); }  /* Reach halfway and hide first element */
+    100% { transform: translateX(0%); } 
+  }
+  /*-----------------*/
+
+/*----scroll to top ----*/
+/* Style your content here */
+
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    background-color: #f74d07;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+  /* Show Scroll to Top button when class is applied */
+  .show-scroll-top-btn {
+    display: inline-block;
+  }
+  
+  /* Hide paragraph with a class */
+  .hidden {
+    display: none;
+  }
+  
+  /* Optional styles for your content */
+  #myContent {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+  }
+  
+  #submenu {
+    padding: 10px;
+    background-color: #efefef;
+  }
+  

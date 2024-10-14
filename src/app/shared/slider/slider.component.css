@@ -1,0 +1,11 @@
+button.prev, button.next{
+    position: absolute;
+    bottom: 0px;
+}
+.prev, .next{
+    background: #f74d07;
+    padding: 10px;
+    margin: 10px 10px 0 20px;
+    color: white;
+}
+button.next{ left: 100px;}
