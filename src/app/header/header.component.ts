@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  isContentVisible = false;
+
+  // Function to toggle content visibility
+  toggleContent() {
+    this.isContentVisible = !this.isContentVisible;
+  }
 }

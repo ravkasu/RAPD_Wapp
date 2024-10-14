@@ -1,6 +1,6 @@
 <!--Contact Popup-->
 
-<div class="contactForm z-50" id="myContent">
+<div class="contactForm z-50" id="myContent" *ngIf="isContentVisible">
     <h3 class="text-yellow-500">Contact Form</h3>
     <form action="send-email.php" method="post" id="contact-form" class="mx-auto mt-5 max-w-xl sm:mt-5">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

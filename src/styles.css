@@ -56,15 +56,13 @@
     border-radius: 10px;
     padding: 10px;
     position: fixed;
-    bottom: 10%;
-    right: 5%;
+    bottom: 13%;
+    right: 6%;
     margin-top: 20px;
     min-width: 400px;
     width: 400px;
 }
-#myContent{
-    display: none;
-}
+
 .flex1 {
     flex: 1 0 auto !important;
 }
@@ -432,6 +430,7 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     margin-top: 10px;
+    /* display: none; */
   }
   
   #submenu {

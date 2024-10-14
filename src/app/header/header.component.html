@@ -1,7 +1,7 @@
 
 <!--Contact Popup-->
 	<!-- <div class="cf-contactForm"> -->
-        <div class="contactForm z-50" id="myContent">
+        <div class="contactForm z-50" id="myContent" *ngIf="isContentVisible">
             <h3 class="text-yellow-500">Contact Form</h3>
             <form action="send-email.php" method="post" id="contact-form" class="mx-auto mt-5 max-w-xl sm:mt-5">
                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -97,7 +97,7 @@
             <p id="form-message"></p>
         </div>
         <!-- </div> -->
-        <button class="cf-icon z-50" id="toggleButton">
+        <button class="cf-icon z-50" id="toggleButton" (click)="toggleContent()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill"
                 viewBox="0 0 16 16">
                 <path
