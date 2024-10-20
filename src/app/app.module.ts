@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 
@@ -22,8 +24,10 @@ import { SliderComponent } from './shared/slider/slider.component';
     SliderComponent
   ],
   imports: [
-    BrowserModule,       // Required for running the app in the browser
-    AppRoutingModule     // Your routing configuration
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],         // Place any services here if you need global services
   bootstrap: [AppComponent]  // The root component to bootstrap the application
