@@ -9,6 +9,7 @@ import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component'
 import { ModernslaveryComponent } from './modernslavery/modernslavery.component';
 import { QaadvisoryserviceComponent } from './qaadvisoryservice/qaadvisoryservice.component';
 import { ProjectresourcesolutionsComponent } from './projectresourcesolutions/projectresourcesolutions.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },   
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'privacypolicy', component: PrivacypolicyComponent },          
   { path: 'agreement', component: AgreementComponent },
   { path: 'modernslavery', component: ModernslaveryComponent }, 
+  { path: 'thankyou', component: ThankyouComponent }, 
   { path: '**', redirectTo: 'home', pathMatch: 'full' }  
 ];
 
