@@ -1,6 +1,8 @@
 
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +10,17 @@ import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  isHomePage: boolean = false;
+  isHomePage: boolean = true;
   isHeaderVisible = false;
+  @ViewChild('home')
+  homeComponent!: HomeComponent;
+  @ViewChild('header')
+  headerComponent!: HeaderComponent;
 
+  ngAfterViewInit(): void {
+    console.log('Home component:', this.homeComponent);
+    console.log('Header component:', this.headerComponent);
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY;

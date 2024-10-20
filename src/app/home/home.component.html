@@ -1,12 +1,9 @@
 <!--Contact Popup-->
-
 <div class="contactForm z-50" id="myContent" *ngIf="isContentVisible">
     <h3 class="text-yellow-500">Contact Form</h3>
     <form action="send-email.php" method="post" id="contact-form" class="mx-auto mt-5 max-w-xl sm:mt-5">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
-                <!-- <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First
-                            name</label> -->
                 <div class="mt-2.5">
                     <input required placeholder="First Name" type="text" name="first-name" id="first-name"
                         autocomplete="given-name"
@@ -14,8 +11,6 @@
                 </div>
             </div>
             <div>
-                <!-- <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last
-                            name</label> -->
                 <div class="mt-2.5">
                     <input required placeholder="Last Name" type="text" name="last-name" id="last-name"
                         autocomplete="family-name"
@@ -23,15 +18,12 @@
                 </div>
             </div>
             <div class="">
-                <!-- <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label> -->
                 <div class="mt-2.5">
                     <input required placeholder="Email" type="email" name="email" id="email" autocomplete="email"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="">
-                <!-- <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone
-                            number</label> -->
                 <div class="relative mt-2.5">
                     <input required placeholder="Telephone Number" type="number" name="phone-number" id="phone-number"
                         autocomplete="tel"
@@ -39,56 +31,26 @@
                 </div>
             </div>
             <div class="">
-                <!-- <label for="company"
-                            class="block text-sm font-semibold leading-6 text-gray-900">Company</label> -->
                 <div class="mt-2.5">
                     <input required placeholder="Company" type="text" name="company" id="company" autocomplete="company"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
             <div class="">
-                <!-- <label for="companywebsite"
-                            class="block text-sm font-semibold leading-6 text-gray-900">Company Website</label> -->
                 <div class="mt-2.5">
                     <input required placeholder="Company Website" type="text" name="companywebsite" id="companywebsite"
                         autocomplete="company website"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 </div>
             </div>
-            <!--<div class="sm:col-span-2">
-                        !-- <label for="hear"
-                            class="block text-sm font-semibold leading-6 text-gray-900">How did you hear about us?</label> --
-                        <div class="mt-2.5">
-                            <input required placeholder="How did you hear about us?" type="text" name="hear" id="hear" autocomplete="hear"
-                                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        </div>
-                    </div> -->
+            
 
             <div class="sm:col-span-2">
-                <!-- <label for="message"
-                            class="block text-sm font-semibold leading-6 text-gray-900">Message</label> -->
-                <div class="mt-2.5">
+                 <div class="mt-2.5">
                     <textarea placeholder="Description" name="message" id="message" rows="4"
                         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                 </div>
             </div>
-            <!-- <div class="flex gap-x-4 sm:col-span-2">
-                        <div class="flex h-6 items-center">
-                            Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200"
-                            <button type="button"
-                                class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-                                <span class="sr-only">Agree to policies</span>
-                                Enabled: "translate-x-3.5", Not Enabled: "translate-x-0"
-                                <span aria-hidden="true"
-                                    class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
-                            </button>
-                        </div>
-                        <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
-                            By selecting this, you agree to our
-                            <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
-                        </label>
-                    </div> -->
         </div>
         <div class="mt-10">
             <button type="submit"
@@ -100,7 +62,7 @@
     <p id="form-message"></p>
 </div>
 
-
+<!--Contact Popup button-->
 <button class="cf-icon z-50" id="toggleButton" (click)="toggleContent()">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill"
         viewBox="0 0 16 16">
@@ -108,25 +70,21 @@
             d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
     </svg>
 </button>
-<!--Contact Popup button-->
-
-
 
 <!-- Scroll to Top Button -->
 <button id="scroll-top-btn" [ngClass]="{'show-scroll-top-btn': isScrollTopVisible}" (click)="scrollToTop()">
-    <a href="#">
+   
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
             class="bi bi-hand-index-thumb" viewBox="0 0 16 16">
             <path
                 d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
         </svg>
-    </a>
+    
 </button>
 
-
-
 <!-- navbar -->
-<div x-data="{ open: false }" [ngClass]="{'headerfixed': isHeaderVisible, 'dis_none': !isHeaderVisible}" class="w-full headerfixed dis_none text-gray-700 bg-cream">
+<div x-data="{ open: false }" [ngClass]="{'headerfixed': isHeaderVisible, 'dis_none': !isHeaderVisible}"
+    class="w-full headerfixed dis_none text-gray-700 bg-cream">
     <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
         <div class="flex flex-row items-center justify-between py-6">
             <div class="relative">
@@ -157,7 +115,7 @@
                 routerLink="/home">Home
             </a>
             <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-            routerLink="/about">About Us
+                routerLink="/about">About Us
             </a>
             <li class="menu-item">
                 <a id="toggleButton"
@@ -192,14 +150,14 @@
                 </ul>
             </li>
             <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-            routerLink="/contact">Contact Us
+                routerLink="/contact">Contact Us
             </a>
         </nav>
     </div>
 </div>
 
 <!-- Banner -->
- <div class="bg-cream lg:pt-0 lg:pb-0">
+<div class="bg-cream lg:pt-0 lg:pb-0">
     <div class="slider">
         <div class="slide">
             <img src="assets/images/fromvisiontoreality.png" alt="From Vision to Reality"
@@ -218,8 +176,8 @@
 
     </div>
 
-</div> 
-<app-slider></app-slider> 
+</div>
+<app-slider></app-slider>
 
 
 <!--Container-->
@@ -239,7 +197,7 @@
     </div>
     <!-- card -->
     <div class="grid md:grid-cols-3 gap-14 md:gap-5 mt-20">
-        <a href="qa-advisory-service.html" data-aos="fade-up" class="bg-white shadow-xl p-6 text-center rounded-xl">
+        <a routerLink="/qaadvisoryservice" data-aos="fade-up" class="bg-white shadow-xl p-6 text-center rounded-xl">
             <div style="background: #f74d07;"
                 class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
                 <svg class="w-6 h-6 text-white" viewBox="0 0 33 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +212,7 @@
                 processes and achieve unparalleled product excellence.
             </p>
         </a>
-        <a href="testing-service.html" data-aos="fade-up" data-aos-delay="150"
+        <a routerLink="/testingservices" data-aos="fade-up" data-aos-delay="150"
             class="bg-white shadow-xl p-6 text-center rounded-xl">
             <div style="background: #335352;"
                 class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
@@ -303,7 +261,7 @@
                 excellence.
             </p>
         </a>
-        <a href="project-resource-solutions.html" data-aos="fade-up" data-aos-delay="300"
+        <a routerLink="/projectresourcesolutions" data-aos="fade-up" data-aos-delay="300"
             class="bg-white shadow-xl p-6 text-center rounded-xl">
             <div style="background: #6c7a69;"
                 class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
@@ -332,7 +290,7 @@
                 is why we tailor our QA and testing strategies to perfectly align with your specific needs,
                 ensuring optimal efficacy and efficiency
             </p>
-            <button onclick="window.location.href='about.html'"
+            <button (click)="goToAbout()"
                 class="flex items-center space-x-3 pl-3 border-b border-l border-t border-yellow-500 text-yellow-500 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
                 <span>More About Us</span>
                 <div class="border border-yellow-500 h-14 w-14 rounded-full flex items-center justify-center">
@@ -348,312 +306,3 @@
     </div>
 
 </div>
-
-
-<!-- .industrial -->
-<!-- <div class="bg-cream mt-12">
-    <div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden">
-
-        <div data-aos="flip-up" class="max-w-8xl mx-auto mt-12 sm:pt-2 lg:pb-12">
-            <h1 class="text-center mb-3 text-rapd-1 font-medium lg:pb-12 font-semibold text-darken text-2xl">Spanning
-                Sectors:<span class="text-yellow-500"> See Who We Work With</span>
-            </h1>
-            <div class="grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center" id="industry">
-                <marquee>
-                   
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-red-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bank h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
-                        </svg> Banking
-                        & Finance</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 bi bi-lungs mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M8.5 1.5a.5.5 0 1 0-1 0v5.243L7 7.1V4.72C7 3.77 6.23 3 5.28 3c-.524 0-1.023.27-1.443.592-.431.332-.847.773-1.216 1.229-.736.908-1.347 1.946-1.58 2.48-.176.405-.393 1.16-.556 2.011-.165.857-.283 1.857-.241 2.759.04.867.233 1.79.838 2.33.67.6 1.622.556 2.741-.004l1.795-.897A2.5 2.5 0 0 0 7 11.264V10.5a.5.5 0 0 0-1 0v.764a1.5 1.5 0 0 1-.83 1.342l-1.794.897c-.978.489-1.415.343-1.628.152-.28-.25-.467-.801-.505-1.63-.037-.795.068-1.71.224-2.525.157-.82.357-1.491.491-1.8.19-.438.75-1.4 1.44-2.25.342-.422.703-.799 1.049-1.065.358-.276.639-.385.833-.385a.72.72 0 0 1 .72.72v3.094l-1.79 1.28a.5.5 0 0 0 .58.813L8 7.614l3.21 2.293a.5.5 0 1 0 .58-.814L10 7.814V4.72a.72.72 0 0 1 .72-.72c.194 0 .475.11.833.385.346.266.706.643 1.05 1.066.688.85 1.248 1.811 1.439 2.249.134.309.334.98.491 1.8.156.814.26 1.73.224 2.525-.038.829-.224 1.38-.505 1.63-.213.19-.65.337-1.628-.152l-1.795-.897A1.5 1.5 0 0 1 10 11.264V10.5a.5.5 0 0 0-1 0v.764a2.5 2.5 0 0 0 1.382 2.236l1.795.897c1.12.56 2.07.603 2.741.004.605-.54.798-1.463.838-2.33.042-.902-.076-1.902-.24-2.759-.164-.852-.38-1.606-.558-2.012-.232-.533-.843-1.571-1.579-2.479-.37-.456-.785-.897-1.216-1.229C11.743 3.27 11.244 3 10.72 3 9.77 3 9 3.77 9 4.72V7.1l-.5-.357z" />
-                        </svg> Insurance</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 bi bi-book mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                        </svg> Education</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-broadcast-pin h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8" />
-                        </svg> Energy & Utilities</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-prescription2 h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path d="M7 6h2v2h2v2H9v2H7v-2H5V8h2z" />
-                            <path
-                                d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v10.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5V4a1 1 0 0 1-1-1zm2 3v10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V4zM3 3h10V1H3z" />
-                        </svg>
-                        Health
-                        Care
-                    </span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-file-earmark-image h-7 mr-3" viewBox="0 0 16 16">
-                            <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
-                            <path
-                                d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1z" />
-                        </svg> Media & Entertainment</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-green-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-droplet-half h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M7.21.8C7.69.295 8 0 8 0q.164.544.371 1.038c.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8m.413 1.021A31 31 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
-                            <path fill-rule="evenodd"
-                                d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z" />
-                        </svg> Oil & Gas Mining</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-shield-fill-check h-7 mr-3" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z" />
-                        </svg> Public Sector</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-indigo-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shop h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
-                        </svg> Retail & E-Commerce</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-database-fill h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223" />
-                            <path
-                                d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                            <path
-                                d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                            <path
-                                d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                        </svg>
-                        Logistics & Distribution
-                    </span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-globe-central-south-asia h-7 mr-3" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4.882 1.731a.48.48 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.7.7 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a1 1 0 0 0-.462-.04 7 7 0 0 1 2.45-2.027m-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.8.8 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.45.45 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282l.04-.001a7.003 7.003 0 0 1-12.658.905Z" />
-                        </svg>
-                        Travel & Hospitality
-                    </span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-red-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bank h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z" />
-                        </svg> Banking
-                        & Finance</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 bi bi-lungs mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M8.5 1.5a.5.5 0 1 0-1 0v5.243L7 7.1V4.72C7 3.77 6.23 3 5.28 3c-.524 0-1.023.27-1.443.592-.431.332-.847.773-1.216 1.229-.736.908-1.347 1.946-1.58 2.48-.176.405-.393 1.16-.556 2.011-.165.857-.283 1.857-.241 2.759.04.867.233 1.79.838 2.33.67.6 1.622.556 2.741-.004l1.795-.897A2.5 2.5 0 0 0 7 11.264V10.5a.5.5 0 0 0-1 0v.764a1.5 1.5 0 0 1-.83 1.342l-1.794.897c-.978.489-1.415.343-1.628.152-.28-.25-.467-.801-.505-1.63-.037-.795.068-1.71.224-2.525.157-.82.357-1.491.491-1.8.19-.438.75-1.4 1.44-2.25.342-.422.703-.799 1.049-1.065.358-.276.639-.385.833-.385a.72.72 0 0 1 .72.72v3.094l-1.79 1.28a.5.5 0 0 0 .58.813L8 7.614l3.21 2.293a.5.5 0 1 0 .58-.814L10 7.814V4.72a.72.72 0 0 1 .72-.72c.194 0 .475.11.833.385.346.266.706.643 1.05 1.066.688.85 1.248 1.811 1.439 2.249.134.309.334.98.491 1.8.156.814.26 1.73.224 2.525-.038.829-.224 1.38-.505 1.63-.213.19-.65.337-1.628-.152l-1.795-.897A1.5 1.5 0 0 1 10 11.264V10.5a.5.5 0 0 0-1 0v.764a2.5 2.5 0 0 0 1.382 2.236l1.795.897c1.12.56 2.07.603 2.741.004.605-.54.798-1.463.838-2.33.042-.902-.076-1.902-.24-2.759-.164-.852-.38-1.606-.558-2.012-.232-.533-.843-1.571-1.579-2.479-.37-.456-.785-.897-1.216-1.229C11.743 3.27 11.244 3 10.72 3 9.77 3 9 3.77 9 4.72V7.1l-.5-.357z" />
-                        </svg> Insurance</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-7 bi bi-book mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                        </svg> Education</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-broadcast-pin h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8" />
-                        </svg> Energy & Utilities</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-prescription2 h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path d="M7 6h2v2h2v2H9v2H7v-2H5V8h2z" />
-                            <path
-                                d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v10.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5V4a1 1 0 0 1-1-1zm2 3v10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V4zM3 3h10V1H3z" />
-                        </svg>
-                        Health
-                        Care
-                    </span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-yellow-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-file-earmark-image h-7 mr-3" viewBox="0 0 16 16">
-                            <path d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
-                            <path
-                                d="M14 14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zM4 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V4.5h-2A1.5 1.5 0 0 1 9.5 3V1z" />
-                        </svg> Media & Entertainment</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-green-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-droplet-half h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M7.21.8C7.69.295 8 0 8 0q.164.544.371 1.038c.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8m.413 1.021A31 31 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z" />
-                            <path fill-rule="evenodd"
-                                d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z" />
-                        </svg> Oil & Gas Mining</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-blue-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-shield-fill-check h-7 mr-3" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z" />
-                        </svg> Public Sector</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-indigo-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shop h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
-                        </svg> Retail & E-Commerce</span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-database-fill h-7 mr-3"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223" />
-                            <path
-                                d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                            <path
-                                d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                            <path
-                                d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972" />
-                        </svg>
-                        Logistics & Distribution
-                    </span>
-                    <span class="inline-flex items-center m-3 px-2 py-1 text-xs font-medium text-purple-700">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            class="bi bi-globe-central-south-asia h-7 mr-3" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4.882 1.731a.48.48 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.7.7 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a1 1 0 0 0-.462-.04 7 7 0 0 1 2.45-2.027m-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.8.8 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.45.45 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282l.04-.001a7.003 7.003 0 0 1-12.658.905Z" />
-                        </svg>
-                        Travel & Hospitality
-                    </span>
-                    
-                </marquee>
-
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!--Footer-->
-<!-- <footer class="mt- foot-color py-5 px-5">
-    <div class="w-full mx-auto">
-        <div class="grid md:grid-cols-3 gap-3 md:gap-3 mt-2">
-            <div data-aos="fade-up" data-aos-delay="150" class="p-4 flex items-center">
-                <div class="relative">
-                    <a routerLink="/home"
-                        class="text-lg relative z-50 font-bold tracking-widest rounded-lg focus:outline-none focus:shadow-outline text-white">
-                        <strong class="text-red">R</strong>APD
-                        SERVICE</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor"
-                        class="bi bi-file h-11 z-40 absolute -top-2 -left-3" viewBox="0 0 16 16">
-                        <path
-                            d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1" />
-                    </svg>
-                    <p class="text-white">
-                        Your trusted partner for innovative IT solutions. We specialize in delivering top-notch
-                        technology services tailored to your unique needs. Join us in harnessing the power of
-                        digital transformation.
-                    </p>
-
-                    <a href="https://www.linkedin.com/company/rapd-service/" target="_blank" class="text-white sm:m-12">
-                        <div
-                            class="flex h-11 w-11 mr-3 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-linkedin text-yellow-500 h-5 w-5 flex-none" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="150" class="pl-4 pr-4 pb-4 pt-1 lg:pl-32">
-                
-                <div class="mt-5">
-                    <div class="flex-auto">
-                        <a href="#" class="block font-semibold text-white">
-                            UK Address
-                        </a>
-                        <p class="mt-1 text-white">7 Bell Yard, London, WC2A 2JR</p>
-
-                        <a href="#" class="block text-white flex mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-envelope-fill mt-1 mr-1 text-yellow-500" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                            </svg>
-
-                            <p class="text-white">contact&#64;rapdservice.co.uk</p>
-                        </a>
-
-                        <a href="#" class="block text-white flex mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-telephone-fill mt-1 mr-1 text-yellow-500" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                            </svg>
-                            <p class="text-white">+44 20 3287 2447</p>
-                        </a>
-                    </div>
-                </div>
-
-                
-            </div>
-            <div data-aos="fade-up" data-aos-delay="150" class="pl-4 pr-4 pb-4 pt-1">
-
-                <div class="mt-5">
-                    <div class="flex-auto">
-                        <a href="#" class="block font-semibold text-white">
-                            India Address
-                        </a>
-                        <p class="mt-1 text-white">Plot no: 31/w, Street no:3
-                            Rd no:2, Jublee Hills
-                            Hyderabad: 500045
-                        </p>
-
-                        <a href="#" class="block text-white flex mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-envelope-fill mt-1 mr-1 text-yellow-500" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                            </svg>
-                            <p class="text-white">contact&#64;rapdservice.co.uk</p>
-
-                        </a>
-
-                        <a href="#" class="block text-white flex mt-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-telephone-fill mt-1 mr-1 text-yellow-500" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                            </svg>
-                            <p class="text-white">+91-7396142449</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="mt-3 mb-3 text-gray">
-    <div class="sm:w-1/2 mx-auto">
-        <div class="grid md:grid-cols-4 gap-4 md:gap-4 mt-2">
-            <div class="flex justify-center text-white text-sm">
-                <p class="no-wrap px-3">&copy; 2024 RAPD Services.</p>
-            </div>
-            <div class="flex justify-center text-white text-sm border-l border-gray-400">
-                <a routerLink="/modern-slavery" class="px-3">Modern Slavery</a>
-            </div>
-            <div class="flex justify-center text-white text-sm border-l border-gray-400">
-                <a routerLink="/privacy-policy" class="px-3">Privacy Policy</a>
-            </div>
-            <div class="flex justify-center text-white text-sm border-l border-gray-400">
-                <a routerLink="/agreement-of-use" class="px-3">Agreement Of Use</a>
-            </div>
-        </div>
-    </div>
-</footer> -->

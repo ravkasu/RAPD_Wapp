@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,16 @@ export class HomeComponent {
  timeoutId: any = null;
 
  isHeaderVisible = false;
+ constructor(private router: Router) {}
 
+ // Method to navigate to the 'about' route
+ goToAbout() {
+   this.router.navigate(['/about']).then(() => {
+    // Scroll to the top of the page after navigation
+    // window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+ }
  // Function to hide the top section
  hideDiv() {
    const topSection = document.getElementById("topSection");
