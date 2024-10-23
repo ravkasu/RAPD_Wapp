@@ -31,45 +31,26 @@ export class ContactComponent {
     });
   }
 
-  // Submit form data
   onSubmit() {
     if (this.contactForm.valid) {
-      this.http.post(this.apiUrl, this.contactForm.value).subscribe({
-        next: (response) => {
-          if (response === 'success') {
-            // On success, redirect to the thank you page
+      const formData = this.contactForm.value;
+
+      this.formSubmitService.sendEmail(formData).subscribe(
+        response => {
+          if (response.status === 'success') {
+            this.formMessage = 'Email sent successfully!';
             this.router.navigate(['/thankyou']);
           } else {
-            console.error(response);
+            this.formMessage = response.message || 'Failed to send email.';
           }
-          this.formMessage = 'Your message has been sent!';
-          this.contactForm.reset();  // Reset the form after successful submission
         },
-        error: (error) => {
-          this.formMessage = 'There was an error sending your message. Please try again.';
+        error => {
+          this.formMessage = 'An error occurred. Please try again.';
         }
-      });
+      );
     } else {
-      this.formMessage = 'Please fill out all required fields.';
+      this.formMessage = 'Please fill in all required fields.';
     }
   }
-  // onSubmit(formData: any) {
-  //   if (this.contactForm.valid) {
-  //     this.formSubmitService.submitForm(formData).subscribe({
-  //       next: (response) => {
-  //         if (response.status === 'success') {
-  //           // On success, redirect to the thank you page
-  //           this.router.navigate(['/thankyou']);
-  //         } else {
-  //           console.error(response.message);
-  //         }
-  //       },
-  //       error: (error) => {
-  //         console.error('There was an error!', error);
-  //       }
-  //     });
-  //   } else {
-  //     this.formMessage = 'Please fill out all required fields.';
-  //   }
-  // }
+  
 }

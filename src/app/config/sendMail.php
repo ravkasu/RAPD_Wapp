@@ -1,4 +1,17 @@
 <?php
+// Set CORS headers to allow requests from your Angular application
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin. You can specify your domain instead of *
+header("Access-Control-Allow-Methods: POST, OPTIONS"); // Allow POST and OPTIONS requests
+header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Allow specific headers
+header('Content-Type: application/json');
+
+// Handle preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    // Respond to preflight CORS request with 200 OK
+    http_response_code(200);
+    exit;
+}
+
 // Function to sanitize input
 function sanitize_input($data) {
     return htmlspecialchars(stripslashes(trim($data)));
@@ -8,14 +21,17 @@ function sanitize_input($data) {
 $response = array("status" => "error", "message" => "Something went wrong");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get data from form and sanitize
-    $firstname = sanitize_input($_POST['first-name'] ?? '');
-    $lastname = sanitize_input($_POST['last-name'] ?? '');
-    $email = sanitize_input($_POST['email'] ?? '');
-    $phonenumber = sanitize_input($_POST['phone-number'] ?? '');
-    $company = sanitize_input($_POST['company'] ?? '');
-    $companywebsite = sanitize_input($_POST['companywebsite'] ?? '');
-    $message = sanitize_input($_POST['message'] ?? '');
+    // Get data from POST request and sanitize
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+
+    $firstname = sanitize_input($data['firstName'] ?? '');
+    $lastname = sanitize_input($data['lastName'] ?? '');
+    $email = sanitize_input($data['email'] ?? '');
+    $phonenumber = sanitize_input($data['phoneNumber'] ?? '');
+    $company = sanitize_input($data['company'] ?? '');
+    $companywebsite = sanitize_input($data['companyWebsite'] ?? '');
+    $message = sanitize_input($data['message'] ?? '');
 
     // Check required fields
     if (!empty($email) && !empty($firstname) && !empty($lastname)) {
@@ -50,6 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Return JSON response
-header('Content-Type: application/json');
 echo json_encode($response);
 ?>

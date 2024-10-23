@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class FormSubmitService {
-  private apiUrl = 'config/sendMail.php'; // Your PHP backend endpoint
+    private apiUrl = 'http://localhost/template-RAPD-A/RAPD_Wapp/src/app/config/sendMail.php';
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
+    sendEmail(formData: any): Observable<any> {
+        // Set headers to indicate JSON content
+        const headers = new HttpHeaders({
+            'Content-Type': 'application/json'
+        });
 
-  submitForm(formData: any): Observable<any> {
-    return this.http.post(this.apiUrl, formData);
-  }
+        // Send HTTP POST request to PHP backend
+        return this.http.post<any>(this.apiUrl, JSON.stringify(formData), { headers });
+    }
 }
