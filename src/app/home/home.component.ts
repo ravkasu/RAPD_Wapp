@@ -1,5 +1,8 @@
 import { Component, HostListener } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormSubmitService } from '../config/form-submit.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +18,47 @@ export class HomeComponent {
  timeoutId: any = null;
 
  isHeaderVisible = false;
- constructor(private router: Router) {}
+ contactForm: FormGroup;
+  formMessage: string = '';
+
+  constructor(
+    private fb: FormBuilder,
+    private formSubmitService: FormSubmitService,
+    private http: HttpClient,
+    private router: Router
+  ) {
+    this.contactForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', Validators.required],
+      company: ['', Validators.required],
+      companyWebsite: ['', Validators.required],
+      message: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
+
+      this.formSubmitService.sendEmail(formData).subscribe(
+        response => {
+          if (response.status === 'success') {
+            this.formMessage = 'Email sent successfully!';
+            this.router.navigate(['/thankyou']);
+          } else {
+            this.formMessage = response.message || 'Failed to send email.';
+          }
+        },
+        error => {
+          this.formMessage = 'An error occurred. Please try again.';
+        }
+      );
+    } else {
+      this.formMessage = 'Please fill in all required fields.';
+    }
+  }
 
  // Method to navigate to the 'about' route
  goToAbout() {

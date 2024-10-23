@@ -1,4 +1,8 @@
 import { Component, HostListener } from '@angular/core';
+import { FormSubmitService } from '../config/form-submit.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +18,48 @@ export class HeaderComponent {
  timeoutId: any = null;
 
  isHeaderVisible = false;
- constructor() {}
+ private apiUrl = 'config/mailSend.php';
+  contactForm: FormGroup;
+  formMessage: string = '';
+
+  constructor(
+    private fb: FormBuilder,
+    private formSubmitService: FormSubmitService,
+    private http: HttpClient,
+    private router: Router
+  ) {
+    this.contactForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', Validators.required],
+      company: ['', Validators.required],
+      companyWebsite: ['', Validators.required],
+      message: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
+
+      this.formSubmitService.sendEmail(formData).subscribe(
+        response => {
+          if (response.status === 'success') {
+            this.formMessage = 'Email sent successfully!';
+            this.router.navigate(['/thankyou']);
+          } else {
+            this.formMessage = response.message || 'Failed to send email.';
+          }
+        },
+        error => {
+          this.formMessage = 'An error occurred. Please try again.';
+        }
+      );
+    } else {
+      this.formMessage = 'Please fill in all required fields.';
+    }
+  }
 
  // Function to hide the top section
  hideDiv() {

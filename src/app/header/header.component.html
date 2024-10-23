@@ -1,65 +1,68 @@
 <!--Contact Popup-->
 <div class="contactForm z-50" id="myContent" *ngIf="isContentVisible">
     <h3 class="text-yellow-500">Contact Form</h3>
-    <form action="send-email.php" method="post" id="contact-form" class="mx-auto mt-5 max-w-xl sm:mt-5">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form" class="mx-auto mt-5 max-w-xl sm:mt-5">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-                <div class="mt-2.5">
-                    <input required placeholder="First Name" type="text" name="first-name" id="first-name"
-                        autocomplete="given-name"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          <div>
+            <div class="mt-2.5">
+              <input required placeholder="First Name" type="text" formControlName="firstName" id="first-name"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            <div>
-                <div class="mt-2.5">
-                    <input required placeholder="Last Name" type="text" name="last-name" id="last-name"
-                        autocomplete="family-name"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          </div>
+      
+          <div>
+            <div class="mt-2.5">
+              <input required placeholder="Last Name" type="text" formControlName="lastName" id="last-name"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            <div class="">
-                <div class="mt-2.5">
-                    <input required placeholder="Email" type="email" name="email" id="email" autocomplete="email"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          </div>
+      
+          <div>
+            <div class="mt-2.5">
+              <input required placeholder="Email" type="email" formControlName="email" id="email"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            <div class="">
-                <div class="relative mt-2.5">
-                    <input required placeholder="Telephone Number" type="number" name="phone-number" id="phone-number"
-                        autocomplete="tel"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          </div>
+      
+          <div>
+            <div class="relative mt-2.5">
+              <input required placeholder="Telephone Number" type="number" formControlName="phoneNumber" id="phone-number"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            <div class="">
-                <div class="mt-2.5">
-                    <input required placeholder="Company" type="text" name="company" id="company" autocomplete="company"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          </div>
+      
+          <div>
+            <div class="mt-2.5">
+              <input required placeholder="Company" type="text" formControlName="company" id="company"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            <div class="">
-                <div class="mt-2.5">
-                    <input required placeholder="Company Website" type="text" name="companywebsite" id="companywebsite"
-                        autocomplete="company website"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                </div>
+          </div>
+      
+          <div>
+            <div class="mt-2.5">
+              <input required placeholder="Company Website" type="text" formControlName="companyWebsite" id="companywebsite"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
-            
-
-            <div class="sm:col-span-2">
-                 <div class="mt-2.5">
-                    <textarea placeholder="Description" name="message" id="message" rows="4"
-                        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-                </div>
+          </div>
+      
+          <div class="sm:col-span-2">
+            <div class="mt-2.5">
+              <textarea placeholder="Description" formControlName="message" id="message" rows="4"
+                class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
             </div>
+          </div>
         </div>
+      
         <div class="mt-10">
-            <button type="submit"
-                class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Get in Touch
-            </button>
+          <button type="submit"
+            class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            Get in Touch
+          </button>
         </div>
-    </form>
-    <p id="form-message"></p>
+      </form>
+      
+      <p id="form-message">{{ formMessage }}</p>
+      
 </div>
 
 <button class="cf-icon z-50" id="toggleButton" (click)="toggleContent()">

@@ -1,4 +1,4 @@
-<!-- <div *ngIf="isHomePage; else otherPages">
+<div *ngIf="isHomePage; else otherPages">
   <app-home></app-home>
 </div>
 
@@ -6,11 +6,11 @@
   <app-header></app-header>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
-</ng-template> -->
+</ng-template>
 
-<div [ngClass]="{'home-page': isHomePage, 'other-pages': !isHomePage}">
+<!-- <div [ngClass]="{'home-page': isHomePage, 'other-pages': !isHomePage}">
   <app-home #home *ngIf="isHomePage"></app-home>
   <app-header #header *ngIf="!isHomePage"></app-header>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
-</div>
+</div> -->
