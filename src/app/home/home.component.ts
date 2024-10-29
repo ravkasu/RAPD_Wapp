@@ -16,10 +16,15 @@ export class HomeComponent {
  isContentVisible = false;
  isSubMenuVisible = false;
  timeoutId: any = null;
-
+ open = false;
+ isOn = false;
  isHeaderVisible = false;
  contactForm: FormGroup;
   formMessage: string = '';
+
+  menuOpen = false;
+  subMenuOpen: { [key: string]: boolean } = {};
+
 
   constructor(
     private fb: FormBuilder,
@@ -38,6 +43,16 @@ export class HomeComponent {
     });
   }
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    this.subMenuOpen = {}; // Close all submenus when main menu is toggled
+  }
+
+  toggleSubmenu(event: Event, submenu: string) {
+    event.preventDefault(); // Prevent default link behavior
+    event.stopPropagation(); // Prevents triggering other click events
+    this.subMenuOpen[submenu] = !this.subMenuOpen[submenu];
+  }
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

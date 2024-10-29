@@ -129,7 +129,7 @@ body {
 
 .text-red {
     color: #f74d07;
-    font-size: 4vh;
+    font-size: 30px;
 }
 
 .h-hvh {
@@ -439,4 +439,17 @@ body {
     padding: 10px;
     background-color: #efefef;
   }
-  
+  /*-------------*/
+  .align_lt{
+    top: -0.5rem;
+    left: -.6rem;
+  }
+
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .align_lt{
+        top: -.5rem;
+        left: -.6rem;
+      }
+}

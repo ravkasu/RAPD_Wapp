@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root',
 })
 export class FormSubmitService {
-    private apiUrl = 'http://localhost/template-RAPD-A/RAPD_Wapp/src/app/config/sendMail.php';
+    private apiUrl = 'https://www.rapdservice.co.uk/API/sendMail.php';
 
     constructor(private http: HttpClient) { }
     sendEmail(formData: any): Observable<any> {

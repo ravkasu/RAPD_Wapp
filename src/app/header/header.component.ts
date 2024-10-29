@@ -10,17 +10,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
- // States for toggling visibility
- isParagraphHidden = true;
- isScrollTopVisible = false;
- isContentVisible = false;
- isSubMenuVisible = false;
- timeoutId: any = null;
-
- isHeaderVisible = false;
- private apiUrl = 'config/mailSend.php';
+  // States for toggling visibility
+  isParagraphHidden = true;
+  isScrollTopVisible = false;
+  isContentVisible = false;
+  isSubMenuVisible = false;
+  timeoutId: any = null;
+  open = false;
+  isOn = false;
+  isHeaderVisible = false;
+  private apiUrl = 'config/mailSend.php';
   contactForm: FormGroup;
   formMessage: string = '';
+
+  menuOpen = false;
+  subMenuOpen: { [key: string]: boolean } = {};
+
 
   constructor(
     private fb: FormBuilder,
@@ -61,55 +66,65 @@ export class HeaderComponent {
     }
   }
 
- // Function to hide the top section
- hideDiv() {
-   const topSection = document.getElementById("topSection");
-   if (topSection) {
-     topSection.style.display = 'none';
-   }
- }
+  // Function to hide the top section
+  hideDiv() {
+    const topSection = document.getElementById("topSection");
+    if (topSection) {
+      topSection.style.display = 'none';
+    }
+  }
 
- // Function to toggle paragraph visibility
- toggleParagraph() {
-   this.isParagraphHidden = !this.isParagraphHidden;
- }
+  // Function to toggle paragraph visibility
+  toggleParagraph() {
+    this.isParagraphHidden = !this.isParagraphHidden;
+  }
 
- // Function to scroll to top
- scrollToTop() {
-   window.scrollTo({ top: 0, behavior: 'smooth' });
- }
+  // Function to scroll to top
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
- // Function to toggle content visibility
- toggleContent() {
-   this.isContentVisible = !this.isContentVisible;
- }
+  // Function to toggle content visibility
+  toggleContent() {
+    this.isContentVisible = !this.isContentVisible;
+  }
 
- // Function to toggle submenu visibility
- toggleSubMenu() {
-   this.isSubMenuVisible = !this.isSubMenuVisible;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    this.subMenuOpen = {}; // Close all submenus when main menu is toggled
+  }
 
-   // Optional: Timeout to hide the submenu after 5 seconds
-   if (this.isSubMenuVisible) {
-     if (this.timeoutId) {
-       clearTimeout(this.timeoutId);
-     }
-     this.timeoutId = setTimeout(() => {
-       this.isSubMenuVisible = false;
-     }, 5000); // Adjust the timeout duration as needed
-   }
- }
+  toggleSubmenu(event: Event, submenu: string) {
+    event.preventDefault(); // Prevent default link behavior
+    event.stopPropagation(); // Prevents triggering other click events
+    this.subMenuOpen[submenu] = !this.subMenuOpen[submenu];
+  }
+  // Function to toggle submenu visibility
+  toggleSubMenu() {
+    this.isSubMenuVisible = !this.isSubMenuVisible;
 
- // Listen to scroll events to toggle 'scroll-to-top' button visibility
-//  @HostListener('window:scroll', [])
-//  onWindowScroll() {
-//    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//    this.isScrollTopVisible = scrollTop > 100;
-//  }
+    // Optional: Timeout to hide the submenu after 5 seconds
+    if (this.isSubMenuVisible) {
+      if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+      }
+      this.timeoutId = setTimeout(() => {
+        this.isSubMenuVisible = false;
+      }, 5000); // Adjust the timeout duration as needed
+    }
+  }
 
- @HostListener('window:scroll', [])
- onWindowScroll() {
-   const scrollPosition = window.scrollY;
-   this.isHeaderVisible = scrollPosition >= 200;
- }
+  // Listen to scroll events to toggle 'scroll-to-top' button visibility
+  //  @HostListener('window:scroll', [])
+  //  onWindowScroll() {
+  //    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //    this.isScrollTopVisible = scrollTop > 100;
+  //  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition = window.scrollY;
+    this.isHeaderVisible = scrollPosition >= 200;
+  }
 
 }

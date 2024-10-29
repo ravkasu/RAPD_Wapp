@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/ang-rapd
 /tmp
 /out-tsc
 /bazel-out
