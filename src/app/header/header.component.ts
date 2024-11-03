@@ -24,8 +24,8 @@ export class HeaderComponent {
   formMessage: string = '';
 
   menuOpen = false;
-  subMenuOpen: { [key: string]: boolean } = {};
-
+  subMenuOpen: { [key: string]: boolean } = { services: false };
+  
 
   constructor(
     private fb: FormBuilder,
@@ -91,7 +91,7 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-    this.subMenuOpen = {}; // Close all submenus when main menu is toggled
+    this.subMenuOpen = {}; 
   }
 
   toggleSubmenu(event: Event, submenu: string) {
@@ -114,17 +114,19 @@ export class HeaderComponent {
     }
   }
 
-  // Listen to scroll events to toggle 'scroll-to-top' button visibility
-  //  @HostListener('window:scroll', [])
-  //  onWindowScroll() {
-  //    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //    this.isScrollTopVisible = scrollTop > 100;
-  //  }
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY;
     this.isHeaderVisible = scrollPosition >= 200;
   }
+
+
+closeMenu() {
+    this.menuOpen = false;
+    Object.keys(this.subMenuOpen).forEach((key) => {
+        this.subMenuOpen[key] = false;
+    });
+}
+
 
 }

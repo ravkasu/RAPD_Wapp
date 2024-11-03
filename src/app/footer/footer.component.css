@@ -1,0 +1,10 @@
+
+/* Marquee animation */
+@keyframes mar {
+    from {
+        transform: translateX(1000%);
+    }
+    to {
+        transform: translateX(-1000%);
+    }
+}

@@ -8,7 +8,7 @@
 }
 /* Hide Scroll to Top button initially */
 /* slider.component.css */
-.slider {
+/* .slider {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -25,11 +25,76 @@
     opacity: 1;
   }
   
-  /* app.component.css */
   .headerfixed {
     position: fixed;
     top: 0;
     width: 100%;
     display: block;
+  } */
+
+
+/* .slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+} 
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.headerfixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  z-index: 10;
+}
+ */
+@media (max-width: 768px) {
+  /* .slider {
+    height: 70vh; 
+  } */
+
+  .headerfixed {
+    padding: 10px 20px;
+    font-size: 1rem; 
   }
+
+  .slide {
+    background-size: cover; 
+    background-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* .slider {
+    height: 60vh;
+  } */
+
+  .headerfixed {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
   

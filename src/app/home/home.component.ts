@@ -21,7 +21,7 @@ export class HomeComponent {
  isHeaderVisible = false;
  contactForm: FormGroup;
   formMessage: string = '';
-
+dis_none = false;
   menuOpen = false;
   subMenuOpen: { [key: string]: boolean } = {};
 
