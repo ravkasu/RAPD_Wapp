@@ -117,7 +117,7 @@ export class HeaderComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY;
-    this.isHeaderVisible = scrollPosition >= 200;
+    this.isHeaderVisible = scrollPosition > 200;
   }
 
 

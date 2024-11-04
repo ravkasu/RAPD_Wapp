@@ -86,137 +86,6 @@
 
 </button>
 
-<!-- navbar -->
-<!-- <div x-data="{ open: false }" [ngClass]="{'headerfixed': isHeaderVisible, 'dis_none': !isHeaderVisible}" class="w-full headerfixed dis_none text-gray-700 bg-cream">
-    <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
-        <div class="flex flex-row items-center justify-between py-6">
-            <div class="relative">
-                <a routerLink="/home"
-                    class="text-lg relative z-40 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">
-                    <strong class="text-red">R</strong>APD
-                    SERVICE</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor"
-                    class="bi bi-file h-11 z-30 absolute -top-2 -left-3" viewBox="0 0 16 16">
-                    <path
-                        d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1" />
-                </svg>
-            </div>
-            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline">
-                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                    <path x-show="!open" fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                    <path x-show="open" fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-        <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
-            class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
-            <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                routerLink="/home">Home
-            </a>
-            <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                routerLink="/about">About Us
-            </a>
-            <li class="menu-item">
-                <a id="toggleButton"
-                    class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline">
-                    Services
-                </a>
-                <ul class="sub-menu sm:w-1/4">
-                    <li><a routerLink="/qaadvisoryservice">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                            </svg>
-                            QA Advisory & Consulting
-                        </a></li>
-                    <li><a routerLink="/testingservices">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                            </svg>
-                            Managed Testing Service
-                        </a></li>
-                    <li><a routerLink="/projectresourcesolutions">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-                            </svg>
-                            Project Resource Solutions
-                        </a></li>
-                </ul>
-            </li>
-            <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                routerLink="/contact">Contact Us
-            </a>
-        </nav>
-    </div>
-</div> -->
-
-<!-- <header class="header">
-    <div class="customcontainer dis_inline_flex">
-        <div class="logo">
-            <a routerLink="/home"
-                class="text-lg relative z-40 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">
-                <strong class="text-red">R</strong>APD
-                SERVICE</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor"
-                class="bi bi-file h-11 z-30 absolute top-1 left-1" viewBox="0 0 16 16">
-                <path
-                    d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1" />
-            </svg>
-        </div>
-
-        <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
-
-        <nav class="navbar scale-y-0">
-            <ul class="menu" [ngClass]="{'show': menuOpen}">
-                <li><a routerLink="/home">Home</a></li>
-                <li>
-                    <a href="#" (click)="toggleSubmenu($event, 'services')">Services</a>
-                    <ul class="submenu" [ngClass]="{'submenu-open': subMenuOpen['services']}">
-                        <li><a routerLink="/qaadvisoryservice" class="dis_inline_flex">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                            </svg>
-                            <span class="p-l-10">QA Advisory & Consulting</span>
-                        </a></li>
-                    <li><a routerLink="/testingservices" class="dis_inline_flex">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                            </svg>
-                            <span class="p-l-10">Managed Testing Service</span>
-                        </a></li>
-                    <li><a routerLink="/projectresourcesolutions" class="dis_inline_flex">
-                            <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600 mr-3" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-                            </svg>
-                            <span class="p-l-10">Project Resource Solutions</span>
-                        </a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a routerLink="/about">About</a>
-                </li>
-                <li><a routerLink="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header> -->
-
-
 <!-- Banner -->
 <div class="bg-cream lg:pt-0 lg:pb-0">
     <div class="slider">
@@ -342,7 +211,7 @@
     <div class="flex flex-col md:flex-row items-center md:space-x-10 mt-16">
         <div data-aos="fade-right" class="md:w-1/2 lg:pl-14">
             <h1 class="text-darken font-semibold text-3xl lg:pr-56"><span class="text-yellow-500">Why</span> Choose
-                Us ?</h1>
+                Us?</h1>
             <p class="my-4 lg:pr-32">
                 At Rapd, we stand out as more than just a testing service; we are your strategic partner in quality
                 assurance. Our team is composed of industry veterans who bring a wealth of expertise and
