@@ -87,7 +87,8 @@
 </button>
 
 <!-- navbar -->
-<header [ngClass]="{'headerfixed': isHeaderVisible, 'dis_none': !isHeaderVisible}" class="header headerfixed dis_none">
+<header [ngClass]="{ 'headerfixed': isHeaderVisible }" class="header">
+<!-- <header [ngClass]="{'headerfixed': isHeaderVisible, 'dis_none': !isHeaderVisible}" class="header headerfixed dis_none"> -->
     <div class="customcontainer dis_inline_flex">
         <div class="logo">
             <a routerLink="/home"
